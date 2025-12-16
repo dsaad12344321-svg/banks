@@ -1,0 +1,117 @@
+{
+  "banks": [
+    {
+      "id": "banque-misr",
+      "name": "بنك مصر",
+      "logo": "🏦",
+      "certificates": [
+        {
+          "id": "cert-1765597128970",
+          "name": "شهادة ابن مصر الثلاثية المتناقصة",
+          "duration": 36,
+          "interestRate": 15,
+          "returnType": "graduated",
+          "graduatedRates": {
+            "year1": 20.5,
+            "year2": 17,
+            "year3": 13.5
+          },
+          "type": "monthly",
+          "minAmount": 1000,
+          "description": "",
+          "features": [
+            "عائدشهرى",
+            "3سنوات",
+            "عائدمتدرج"
+          ]
+        },
+        {
+          "id": "cert-1765597439987",
+          "name": "شھادة القمة",
+          "duration": 36,
+          "interestRate": 17,
+          "returnType": "fixed",
+          "graduatedRates": {
+            "year1": 15,
+            "year2": 16,
+            "year3": 17
+          },
+          "type": "monthly",
+          "minAmount": 1000,
+          "description": "",
+          "features": [
+            "عائدشهرى",
+            "3سنوات",
+            "عائدثابت"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banque-du-caire",
+      "name": "البنك الأهلي المصري",
+      "logo": "🏛️",
+      "certificates": [
+        {
+          "id": "nbe-3-year",
+          "name": "الشهادة البلاتينيه 3 سنوات",
+          "duration": 36,
+          "interestRate": 17,
+          "returnType": "fixed",
+          "graduatedRates": {
+            "year1": 16,
+            "year2": 17,
+            "year3": 18
+          },
+          "type": "monthly",
+          "minAmount": 1000,
+          "description": "",
+          "features": [
+            "عائد متدرج",
+            "3 سنوات",
+            "عائد شهري",
+            "فائدة متزايدة"
+          ]
+        },
+        {
+          "id": "cert-1765587613441",
+          "name": "الشهادة البلاتينيه ذات العائد المتدرج الشهري",
+          "duration": 36,
+          "interestRate": 15,
+          "returnType": "graduated",
+          "graduatedRates": {
+            "year1": 21,
+            "year2": 16.75,
+            "year3": 13.5
+          },
+          "type": "monthly",
+          "minAmount": 1000,
+          "description": "",
+          "features": [
+            "عائد شهرى",
+            "عائد متدرج",
+            "3سنوات"
+          ]
+        },
+        {
+          "id": "cert-1765592547890",
+          "name": "الشهادة البلاتينيه ذات العائد المتدرج السنوي",
+          "duration": 36,
+          "interestRate": 15,
+          "returnType": "graduated",
+          "graduatedRates": {
+            "year1": 23,
+            "year2": 18.5,
+            "year3": 14
+          },
+          "type": "annual",
+          "minAmount": 1000,
+          "description": "",
+          "features": [
+            "عائدسنوى"
+          ]
+        }
+      ]
+    }
+  ]
+}
