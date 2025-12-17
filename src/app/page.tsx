@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Badge } from '@/components/ui/badge';
 import { Calculator, TrendingUp, Clock, DollarSign, AlertCircle, Play, ExternalLink, Settings } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Certificate {
   id: string;
@@ -51,7 +52,7 @@ export default function Home() {
     {
       id: "banque-misr",
       name: "بنك مصر",
-      logo: "🏦",
+      logo: "misr.png",
       certificates: [
         {
           id: "bm-3-year",
@@ -78,9 +79,9 @@ export default function Home() {
       ]
     },
     {
-      id: "banque-du-caire",
+      id: "National bank of egypt",
       name: "البنك الأهلي المصري",
-      logo: "🏛️",
+      logo: "elahly.png",
       certificates: [
         {
           id: "nbe-3-year",
@@ -285,13 +286,13 @@ export default function Home() {
               <img 
                 src="/logo.png" 
                 alt="Banking Calculator Logo" 
-                className="w-16 h-16 object-cover rounded-full shadow-lg"
+                className="w-20 h-20 object-cover rounded-full shadow-lg"
               />
             </div>
           </div>
 
           <h1 className="text-4xl font-bold text-gray-800 mb-2">
-            🏦 شهادات الودائع البنكية المصرية
+             شهادات وودائع البنكية المصرية
           </h1>
           <p className="text-gray-600 text-lg">
             استكشف أفضل شهادات الادخار واحسب أرباحك بسهولة
@@ -330,7 +331,9 @@ export default function Home() {
               {banks.map((bank) => (
                 <Card key={bank.id} className="hover:shadow-lg transition-shadow">
                   <CardHeader className="text-center">
-                    <div className="text-4xl mb-2">{bank.logo}</div>
+                    <div className="text-4xl mb-2">
+                      <Image src={`/${bank.logo}`} alt={bank.name} height={100} width={100}/>
+                      </div>
                     <CardTitle className="text-xl">{bank.name}</CardTitle>
                     <CardDescription>
                       {bank.certificates.length} شهادة متاحة

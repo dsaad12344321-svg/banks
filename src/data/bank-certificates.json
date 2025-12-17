@@ -3,7 +3,7 @@
     {
       "id": "banque-misr",
       "name": "بنك مصر",
-      "logo": "🏦",
+      "logo": "misr.png",
       "certificates": [
         {
           "id": "cert-1765597128970",
@@ -50,7 +50,7 @@
     {
       "id": "banque-du-caire",
       "name": "البنك الأهلي المصري",
-      "logo": "🏛️",
+      "logo": "elahly.png",
       "certificates": [
         {
           "id": "nbe-3-year",
