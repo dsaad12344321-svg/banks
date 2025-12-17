@@ -48,55 +48,55 @@ interface CalculationResult {
 
 export default function Home() {
   // Static data for now - will be replaced with API call later
-  const staticBanks: Bank[] = [
-    {
-      id: "banque-misr",
-      name: "بنك مصر",
-      logo: "misr.png",
-      certificates: [
-        {
-          id: "bm-3-year",
-          name: "شهادة 3 سنوات",
-          duration: 36,
-          interestRate: 16.5,
-          returnType: "fixed",
-          type: "monthly",
-          minAmount: 1500,
-          description: "شهادة ادخارية لمدة 3 سنوات بسعر فائدة 16.5% سنوياً",
-          features: ["فائدة شهرية", "قابلة للتجديد", "ضد التضخم"]
-        },
-        {
-          id: "bm-5-year",
-          name: "شهادة 5 سنوات",
-          duration: 60,
-          interestRate: 17.5,
-          returnType: "fixed",
-          type: "quarterly",
-          minAmount: 1500,
-          description: "شهادة ادخارية لمدة 5 سنوات بسعر فائدة 17.5% سنوياً",
-          features: ["فائدة ربع سنوية", "أعلى سعر فائدة", "مضمونة"]
-        }
-      ]
-    },
-    {
-      id: "National bank of egypt",
-      name: "البنك الأهلي المصري",
-      logo: "elahly.png",
-      certificates: [
-        {
-          id: "nbe-3-year",
-          name: "شهادة الأمل 3 سنوات",
-          duration: 36,
-          interestRate: 16.25,
-          returnType: "fixed",
-          type: "monthly",
-          minAmount: 1000,
-          description: "شهادة الأمل لمدة 3 سنوات بسعر فائدة 16.25% سنوياً",
-          features: ["فائدة شهرية", "تجديد تلقائي", "مرونة في السحب"]
-        }
-      ]
-    }
-  ];
+  // const staticBanks: Bank[] = [
+  //   {
+  //     id: "banque-misr",
+  //     name: "بنك مصر",
+  //     logo: "misr.png",
+  //     certificates: [
+  //       {
+  //         id: "bm-3-year",
+  //         name: "شهادة 3 سنوات",
+  //         duration: 36,
+  //         interestRate: 16.5,
+  //         returnType: "fixed",
+  //         type: "monthly",
+  //         minAmount: 1500,
+  //         description: "شهادة ادخارية لمدة 3 سنوات بسعر فائدة 16.5% سنوياً",
+  //         features: ["فائدة شهرية", "قابلة للتجديد", "ضد التضخم"]
+  //       },
+  //       {
+  //         id: "bm-5-year",
+  //         name: "شهادة 5 سنوات",
+  //         duration: 60,
+  //         interestRate: 17.5,
+  //         returnType: "fixed",
+  //         type: "quarterly",
+  //         minAmount: 1500,
+  //         description: "شهادة ادخارية لمدة 5 سنوات بسعر فائدة 17.5% سنوياً",
+  //         features: ["فائدة ربع سنوية", "أعلى سعر فائدة", "مضمونة"]
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id: "National bank of egypt",
+  //     name: "البنك الأهلي المصري",
+  //     logo: "elahly.png",
+  //     certificates: [
+  //       {
+  //         id: "nbe-3-year",
+  //         name: "شهادة الأمل 3 سنوات",
+  //         duration: 36,
+  //         interestRate: 16.25,
+  //         returnType: "fixed",
+  //         type: "monthly",
+  //         minAmount: 1000,
+  //         description: "شهادة الأمل لمدة 3 سنوات بسعر فائدة 16.25% سنوياً",
+  //         features: ["فائدة شهرية", "تجديد تلقائي", "مرونة في السحب"]
+  //       }
+  //     ]
+  //   }
+  // ];
 
   const [banks, setBanks] = useState<Bank[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -327,13 +327,13 @@ export default function Home() {
           )}
           
           {!loading && !error && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
               {banks.map((bank) => (
                 <Card key={bank.id} className="hover:shadow-lg transition-shadow">
                   <CardHeader className="text-center">
-                    <div className="text-4xl mb-2">
+                    <div className="mb-2 flex justify-center align-center">
                       <Image src={`/${bank.logo}`} alt={bank.name} height={100} width={100}/>
-                      </div>
+                    </div>
                     <CardTitle className="text-xl">{bank.name}</CardTitle>
                     <CardDescription>
                       {bank.certificates.length} شهادة متاحة
