@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/dsaad12344321-svg/banks/src/app/layout\":[\"static/media/cecdab4984f0ef47-s.p.woff2\",\"static/media/190ce5722df8cd22-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
